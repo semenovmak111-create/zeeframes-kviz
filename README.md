@@ -1,10 +1,11 @@
 # ZeeFrames — six-step quiz (dark)
 
-A six-question brief ("Получите прототип сайта и анализ рынка за шесть ответов") built from zeeframes.com
-parts: the service pages' section head, the Stack block's vertical tabs as the list of questions
-(answered tabs show the answer, so the list doubles as the summary), a dark Stack-style panel for the
-question, the home page's dark FAQ cards as answers (picked = lime border and lime icon box), the lime
-pill button and the ✦ list. On phones the tabs fold into the service pages' mobile toggle.
+A six-question brief ("Получите прототип сайта и анализ рынка за шесть ответов") in the zeeframes.com
+look: the service pages' section head over an olive glow, a six-part progress track, a giant step
+number, the perspective fan with a lime vanishing point from the service pages' illustration, and
+answer cards with the round arrow button of the home page service rows. The lime glow follows the
+pointer, and the picked card fills lime like the /about "Six reasons" rows. Digit keys 1–9 pick an
+answer. The result shows every answer as a card.
 
 Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 
@@ -14,7 +15,7 @@ Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 2. Link them: `<link rel="stylesheet" href="quiz.css">` in `<head>`, `<script src="quiz.js" defer></script>` before `</body>`.
 3. Paste the `<section class="zqz" … data-zqz>` element from `index.html` where the quiz should be.
 
-- The fonts are the site's: Inter Tight 400/500/600 and Geologica 500 (answers). On zeeframes.com they are already loaded.
+- The fonts are the site's: Inter Tight 400/500/600. On zeeframes.com they are already loaded.
 - Colours come from the site tokens (`--color-primary`, `--color-black-300`, `--color-gray-900`, …).
   Each one has a fallback, so the block also works on a page without `colors.css`.
 - Class prefix `zqz-`. No dependencies.
@@ -26,7 +27,8 @@ Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 
 Accessibility:
 - every answer is a `<button aria-pressed>`;
-- the step counter is `aria-live`, the question list is made of buttons that open answered questions;
+- the step counter is `aria-live`, the progress track is made of buttons that open answered questions;
+- digits 1–9 pick an answer while the quiz is on screen (not while typing in a field);
 - hidden steps are `inert`;
 - arrow keys move between the answers, Enter or Space picks one;
 - keyboard users get focus moved to the next question;
