@@ -1,14 +1,23 @@
-# ZeeFrames — six-step quiz (interstitial band)
+# ZeeFrames — six-step quiz "Узнайте, какой сайт подойдёт вашему бизнесу"
 
-A six-question brief ("Получите прототип сайта и анализ рынка за шесть ответов") as a compact dark band
-between two sections, about half the height of one, in the zeeframes.com look: lime eyebrow and heading,
-a six-part progress track, the perspective fan with a lime vanishing point from the service pages'
-illustration, and compact answer cards with the round arrow button of the home page service rows.
-The lime glow follows the pointer, the picked card fills lime like the /about "Six reasons" rows,
-digit keys 1–9 pick an answer.
+The quiz is built as one more block of zeeframes.com: the home page FAQ section ("Questions? We've Got
+Answers") with the same size and values. At 1440 it is 636 px tall on every step, as the FAQ. The site's
+values are listed at the top of `quiz.css`.
 
-The section background is transparent. To lay the band across the seam of the sections around it,
-paint the two halves, e.g. `#check.zqz { padding: 0; background: linear-gradient(#FFF 50%, #FAF9F4 50%); }`.
+- Left: the FAQ intro (eyebrow, heading, one line of text). Where the FAQ has the pill and the
+  Clutch widget, there are six progress squares with "Вопрос 2 из 6" and "Назад".
+- Right: the FAQ accordions. The question is the open card in lime. The answers are the closed
+  cards with the plus icon. A picked answer opens like an accordion: lime border, lime icon with a check.
+- Result: the open card names the site type, **лендинг-«Атлант»**. The type is fixed and the answers do
+  not change it. The answers only fill the last paragraph: every option of questions 2, 4 and 6 carries
+  its sentence in `data-why`, and the result takes one per question, one per line.
+  Question 4 is multi-choice, so it gives the sentence of its first picked option.
+  Below that paragraph are the lime `.btn-primary` pill with the site's text-swap hover and "Пройти заново".
+
+The copy went through the `teksty-sayta` skill. The earlier looks are kept in `eskizy/`: F is the band across
+the section seam (`f.css`), and A–E are older.
+
+amdc-site/v2 embeds `proverka/build.py: section_v2()`.
 
 Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 
@@ -30,7 +39,7 @@ Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 
 Accessibility:
 - every answer is a `<button aria-pressed>`;
-- the step counter is `aria-live`, the progress track is made of buttons that open answered questions;
+- the step counter is `aria-live`, the progress squares are buttons that open answered questions;
 - digits 1–9 pick an answer while the quiz is on screen (not while typing in a field);
 - hidden steps are `inert`;
 - arrow keys move between the answers, Enter or Space picks one;
