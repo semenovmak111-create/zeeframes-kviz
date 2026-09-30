@@ -15,7 +15,7 @@ Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 3. Paste the `<section class="zqz" … data-zqz>` element from `index.html` where the quiz should be.
 
 - The fonts are the site's: Inter Tight 400/500/600 and Geologica 500 (answers). On zeeframes.com they are already loaded.
-- Colours come from the site tokens (`--color-primary`, `--color-cream-white`, `--color-gray-800`, …).
+- Colours come from the site tokens (`--color-primary`, `--color-black-300`, `--color-gray-900`, …).
   Each one has a fallback, so the block also works on a page without `colors.css`.
 - Class prefix `zqz-`. No dependencies.
 - Behaviour relies on `data-zqz-*` attributes only; see the comment at the top of `quiz.js`.
