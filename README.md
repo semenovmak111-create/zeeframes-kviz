@@ -1,11 +1,14 @@
-# ZeeFrames — six-step quiz (dark)
+# ZeeFrames — six-step quiz (interstitial band)
 
-A six-question brief ("Получите прототип сайта и анализ рынка за шесть ответов") in the zeeframes.com
-look: the service pages' section head over an olive glow, a six-part progress track, a giant step
-number, the perspective fan with a lime vanishing point from the service pages' illustration, and
-answer cards with the round arrow button of the home page service rows. The lime glow follows the
-pointer, and the picked card fills lime like the /about "Six reasons" rows. Digit keys 1–9 pick an
-answer. The result shows every answer as a card.
+A six-question brief ("Получите прототип сайта и анализ рынка за шесть ответов") as a compact dark band
+between two sections, about half the height of one, in the zeeframes.com look: lime eyebrow and heading,
+a six-part progress track, the perspective fan with a lime vanishing point from the service pages'
+illustration, and compact answer cards with the round arrow button of the home page service rows.
+The lime glow follows the pointer, the picked card fills lime like the /about "Six reasons" rows,
+digit keys 1–9 pick an answer.
+
+The section background is transparent. To lay the band across the seam of the sections around it,
+paint the two halves, e.g. `#check.zqz { padding: 0; background: linear-gradient(#FFF 50%, #FAF9F4 50%); }`.
 
 Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 
@@ -21,7 +24,7 @@ Demo: https://semenovmak111-create.github.io/zeeframes-kviz/
 - Class prefix `zqz-`. No dependencies.
 - Behaviour relies on `data-zqz-*` attributes only; see the comment at the top of `quiz.js`.
 - The final button links to `#start`. Point it at your contact form.
-- The answers are available as `window.amdcQuiz`, an array of six strings, once the result screen shows.
+- The answers are available as `window.amdcQuiz`, an array of six strings, once the result screen shows; pass them on with the lead form.
 - `?zqz=N` in the page URL opens question N (7 is the result) with earlier answers filled in.
   It is meant for screenshots.
 
